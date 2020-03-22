@@ -8,6 +8,7 @@ order to locate the Sudoku grid within the image and extract the required inform
 
 ## Table of contents
   + [Installation](#installation)
+  + [Getting started](#getting-strated)
   + [Project Details](#project-details)
     * [Image segmentation](#image-segmentation)
     * [Morphology](#morphology)
@@ -20,12 +21,15 @@ order to locate the Sudoku grid within the image and extract the required inform
   + [Sources](#sources)
   
     
- CHARS74k
  
  ## Installation
      $ git clone https://github.com/TristanBester/AR_sudoku
      $ cd AR_sudoku
      $ python setup.py install
+ 
+ ## Getting started
+    $ cd solve
+    $ python3 ar_solver.py
  
 ## Project Details
 ### Image segmentation
