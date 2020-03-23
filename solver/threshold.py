@@ -10,8 +10,9 @@ def get_thresh_adaptive(src):
 
     return fin
 
+
 def get_grid(img_bin):
-    '''Calculate two binary images, one containing the vertival lines in the
+    '''Calculate two binary images, one containing the vertical lines in the
     image and one containing the horizontal lines.
     '''
     vert_len = np.array(img_bin).shape[1]//30
@@ -30,9 +31,10 @@ def get_grid(img_bin):
 
     return vert_im, hor_im
 
+
 def combine_images(vert_im, hor_im):
     '''Combine the images containing the horizontal and vertical lines to form
-    an image containing the Sudoku.
+    an image containing the Sudoku grid.
     '''
     kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
     bin = cv2.addWeighted(vert_im, 1, hor_im, 1, 0)
@@ -41,6 +43,7 @@ def combine_images(vert_im, hor_im):
     (thresh, bin) = cv2.threshold(bin, 128, 255, cv2.THRESH_BINARY)
 
     return bin
+
 
 def get_adaptive_binary(src):
     '''Calculate binary image of the Sudoku grid.
