@@ -1,7 +1,7 @@
 # AR_sudoku
 ## An augmented reality sudoku solver implemented in Python.
 
-> Solves any Sudoku puzzle and displays the solution in real time.
+***Solves any Sudoku puzzle and displays the solution in real time.***
 
  - *Digit classification is performed through the use of a convolutional neural network.*
  - *Computer vision techniques are used in order to locate and extract the required information from the source image.*
