@@ -35,7 +35,7 @@
      $ pip3 install -r requirements.txt
  
  ## Getting started
-    $ cd solve
+    $ cd solver
     $ python3 ar_solver.py
  
 ## Project Details
