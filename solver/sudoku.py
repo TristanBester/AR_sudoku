@@ -11,8 +11,9 @@ class Solver(object):
 
         return False
 
+    
     def is_valid(self, num , i, j, arr):
-        '''Test if is possible to place the given number at the specified
+        '''Test if it is possible to place the given number at the specified
         position in the grid.
         '''
         if num in arr[i]:
@@ -29,6 +30,7 @@ class Solver(object):
             else:
                 return True
 
+            
     def __solve(self, arr):
         '''Solve the Sudoku puzzle making use of backtracking.
         '''
@@ -46,6 +48,7 @@ class Solver(object):
 
         return False
 
+    
     def solve(self, arr):
         '''Solve the Sudoku puzzle if possible.
         '''
