@@ -4,10 +4,11 @@ from keras.models import load_model
 
 class Grid(object):
     def __init__(self):
-        '''Defualt contructor. Load CNN into memory.
+        '''Default constructor. Load CNN into memory.
         '''
         self.model = load_model('CNN.h5')
 
+        
     def init_grid(self, X, indices,size):
         '''Create the Sudoku grid if possible.
         '''
@@ -31,7 +32,7 @@ class Grid(object):
         return True
 
     def is_valid(self):
-        '''Test is the Sudoku grid created from the image is valid.
+        '''Test if the Sudoku grid created from the image is valid.
         '''
         solver = Solver()
         for i in range(self.grid.shape[0]):
@@ -47,7 +48,7 @@ class Grid(object):
         return True
 
     def solve(self):
-        '''Solve the Sudoku grid is possible.
+        '''Solve the Sudoku grid if possible.
         '''
         solver = Solver()
         self.grid = solver.solve(self.grid)
