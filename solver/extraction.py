@@ -4,7 +4,7 @@ import threshold
 
 class Extractor(object):
     def assign_children_to_parents(self, contours, hierarchy):
-        '''Assign all of the child contours to their appopriate parent contour
+        '''Assign all of the child contours to their appropriate parent contour
         in the contour hierarchy.
         '''
         counter = -1
@@ -67,7 +67,7 @@ class Extractor(object):
 
 
     def sort_into_levels(self, boxes):
-        '''Assign the contours into height levels. Each height level corresponds
+        '''Separate the contours into height levels. Each height level corresponds
         to a row in the Sudoku grid.'''
         avg_height = sum([b[3] for b in boxes])
         avg_height /= len(boxes)
@@ -81,7 +81,7 @@ class Extractor(object):
         # Sort contours based on y-values.
         arr = sorted(boxes , key=lambda x: x[1])
 
-        # Assign contours into height levels using the difference between
+        # Separate contours into height levels using the difference between
         # successive contours.
         for b_curr, b_next in zip(arr[:-1], arr[1:]):
             y_diff = abs(b_curr[1] -  b_next[1])
@@ -111,14 +111,14 @@ class Extractor(object):
 
 
     def sort_boxes(self, boxes, src):
-        '''Sort the contours into rows ad coloumns.
+        '''Sort the contours into rows and coloumns.
         '''
         levels = self.sort_into_levels(boxes)
         return self.sort_levels_by_x(levels)
 
 
     def calculate_boxes(self, src):
-        '''Calculate the positision of the grid contours and sort them as
+        '''Calculate the position of the grid contours and sort them as
         required.
         '''
         adaptive_im = threshold.get_adaptive_binary(src)
@@ -128,6 +128,7 @@ class Extractor(object):
         corrected_boxes = self.correct_boxes(boxes)
         self.boxes = self.sort_boxes(corrected_boxes, src)
 
+        
     def test_boxes(self, src):
         '''Test if the grid in the source image is valid.
         '''
@@ -135,7 +136,7 @@ class Extractor(object):
 
 
     def find_top_bottom(self, src):
-        '''Find the positision of the top and bottom of the digit in the source
+        '''Find the position of the top and bottom of the digit in the source
         image.
         '''
         bottom = -1
