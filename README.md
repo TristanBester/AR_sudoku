@@ -88,7 +88,7 @@ As the position of all of the elements in the grid has already been calculated, 
 </p>
 </p>
 <p align="center">
-    Figure 5: TThe solution to the puzzle.
+    Figure 5: The solution to the puzzle.
 </p>
 
 
