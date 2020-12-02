@@ -93,7 +93,7 @@ As the position of all of the elements in the grid has already been calculated, 
 
 
 ## Convolutional Neural Network
-The CNN used for digit classification was created and trained by me. Initiall I attempted to train the model on the MNIST dataset, however the model performed extremely poorly on computer generated digits. The computer generated digits were augmented through the use of morphology (erosion) in an attempt to increase the resemblance between the digits and the handwritten numbers the model was trained on. However, this did not yield the required accuarcy for the model to be used.
+The CNN used for digit classification was created and trained by me. Initially I attempted to train the model on the MNIST dataset, however the model performed extremely poorly on computer generated digits. The computer generated digits were augmented through the use of morphology (erosion) in an attempt to increase the resemblance between the digits and the handwritten numbers the model was trained on. However, this did not yield the required accuarcy for the model to be used.
 
 A subset of the [Chars74K](http://www.ee.surrey.ac.uk/CVSSP/demos/chars74k/) dataset was used in order to train the CNN used in this project. This dataset provides slightly more than ten thousand labeled computer generated digit images. The dataset also contains many other images, however these were not used.
 
